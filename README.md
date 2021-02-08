@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was Made to have A cloud Storage of all the files to access it from any computer with simple ogin
+
+
+the database is used from the fireBase
 
 ## Demo App
 
