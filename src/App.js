@@ -31,8 +31,7 @@ function App() {
   
   
   return (
-    <Paper   elevation={3} className="app"
-    >
+    <div className="app">
       {
         user ? (
           <>
@@ -45,12 +44,12 @@ function App() {
           </>
         ) : (
             <div className='app__login'>
-              <img src={GDriveLogo} alt="ClouDoc" />
-              <Button onClick={handleLogin}>Log in to ClouDoc</Button>
+              <img src={GDriveLogo} alt="Google Drive" />
+              <button onClick={handleLogin}>Log in to Google Drive</button>
             </div>
           )
       }
-    </Paper>
+    </div>
   );
 }
 

@@ -8,7 +8,7 @@ import { storage, db } from '../../firebase'
 import Button from "@material-ui/core/Button"
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
-import { CircularProgress } from '@material-ui/core';
+import { CircularProgress,Input } from '@material-ui/core';
 
 function getModalStyle() {
     return {
@@ -97,14 +97,37 @@ const NewFile = () => {
                     <p>Select files you want to upload!</p>
                     {
                         uploading ? (
-                              <CircularProgress />
+                              <CircularProgress
+                              style = {{
+                                marginLeft:80,
+                                justifyContent : "center",
+                                alignItems : "center",
+                                alignContent : "center"
+                            }} />
 
                            
 
                         ) : (
                                 <>
-                                    <input type="file" onChange={handleChange} />
-                                    <Button onClick={handleUpload} color = "secondary" variant  = "contained">Upload</Button>
+                                <Button
+                                  variant="contained"
+                                 component="label"
+                                 color="primary"
+                                 style = {{
+                                    marginLeft:20
+                                }}
+                                       >
+                                      Upload File
+                                    <input
+                                    type="file"
+                                    hidden
+                                   onChange={handleChange}
+                                />
+                                  </Button>
+                                    <Button onClick={handleUpload} color = "secondary" variant  = "contained"
+                                    style = {{
+                                        marginLeft:80
+                                    }}>Upload</Button>
                                 </>
                             )
                     }
